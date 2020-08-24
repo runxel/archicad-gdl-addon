@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{f6499628-513a-4c8d-a336-6377a85a7e0b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{789e96c9-0515-4b35-86f7-f117c1cd627b}</UniqueIdentifier>
+      <Extensions>rc;r;grc;grf;grl;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Libraries">
+      <UniqueIdentifier>{42902bf0-12fb-4ecb-a6fa-d9d2cf0ceeb9}</UniqueIdentifier>
+      <Extensions>lib</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{56abc09b-a30e-4960-b54f-9ee48ce972ab}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\ReportGD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Inc\ACGDinc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Coord3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\FileOperations.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GDLDefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GDLExport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GDLExtDefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GDLParamList.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GDLPars.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GDLProc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GDLPropertyList.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GDLPropertyListImp.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GSUtilsEnv\OUC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GSUtilsEnv\TTV.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GSUtilsEnv\TTVEnvWin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\ISymbol2D.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\TRANMAT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\Lib\GDLImp.LIB">
+      <Filter>Libraries</Filter>
+    </Library>
+    <Library Include="..\Lib\GSRootImp.LIB">
+      <Filter>Libraries</Filter>
+    </Library>
+    <Library Include="..\Lib\GSUtilsImp.LIB">
+      <Filter>Libraries</Filter>
+    </Library>
+    <Library Include="..\Lib\InputOutputImp.LIB">
+      <Filter>Libraries</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RFIX.win\ReportGD.RC">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

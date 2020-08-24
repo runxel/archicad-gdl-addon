@@ -1,0 +1,15 @@
+# .gitignore
+
+# Don't checkout build results
+GDX-Template/Debug/
+GDX-Template/Release/
+
+# Those folders are just copied from the devkit to ensure smooth compilation.
+/Lib/
+/Inc/
+
+# Visual Studio binary solution
+*.suo
+.vs/
+
+*.code-*

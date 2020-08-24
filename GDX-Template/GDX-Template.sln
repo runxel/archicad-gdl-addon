@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8FD97B45-7099-42B4-82AE-58ACA0F27B58}") = "GDX-Template", "GDX-Template.vcxproj", "{10FA796F-C223-42BC-A56B-75B44C86EB27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10FA796F-C223-42BC-A56B-75B44C86EB27}.Debug|x64.ActiveCfg = Debug|x64
+		{10FA796F-C223-42BC-A56B-75B44C86EB27}.Debug|x64.Build.0 = Debug|x64
+		{10FA796F-C223-42BC-A56B-75B44C86EB27}.Release|x64.ActiveCfg = Release|x64
+		{10FA796F-C223-42BC-A56B-75B44C86EB27}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4385328-0933-472B-814B-53A9CCBE2D03}
+	EndGlobalSection
+EndGlobal

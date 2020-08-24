@@ -45,7 +45,7 @@ Important are the `Inc` and `Lib` folders. They need to be present for a success
 Copy now the "GDX-Template" folder from this repo next to the other folders from the DevKit.
 
 ### A Solution
-Now we need to have a ["_solution_"](https://docs.microsoft.com/en-us/visualstudio/get-started/tutorial-projects-solutions?view=vs-2019). The Visual Studio solution will enable us to _build_ (aka compile) the `.gdx` later on. Without the solution this command is missing. The easiest way to make a solution is to let VS generate it for us. To do so hit <kbd>ctrl + shift + N</kbd> and select <samp>New Solution</samp>.  
+Now we need to have a ["_solution_"](https://docs.microsoft.com/en-us/visualstudio/get-started/tutorial-projects-solutions?view=vs-2019). The Visual Studio solution will enable us to _build_ (aka compile) the `.gdx` later on. Without the solution this command is missing. The easiest way to make a solution is to let VS generate it for us. To do so hit <kbd>ctrl + shift + N</kbd> and select <samp>New Solution</samp>: ![new solution](img/new-solution.png)  
 There is a [`.sln`](GDX-Template/GDX-Template.sln) file in this repo which you can use, but see it more as a reference. Feel free to edit it directly. What you need to do is to generate new GUIDs.  
 One _solution_ can contain multiple _projects_.
 

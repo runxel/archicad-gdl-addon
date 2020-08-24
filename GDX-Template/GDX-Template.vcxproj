@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>GDX-Template</ProjectName>
+    <ProjectGuid>{10FA796F-C223-42BC-A56B-75B44C86EB27}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\Obj\</IntDir>
+    <TargetExt>.gdx</TargetExt>
+    <TargetName>Barebone GDL Addon Example</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\Inc;..\Inc\Geometry;..\Inc\GSRoot;..\Inc\GSUtils;..\Inc\GSXML;..\Inc\GSZLib;..\Inc\InputOutput\InputOutput;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;NDEBUG;WINDOWS;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName).gdx</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <EntryPointSymbol>DllMainEntry</EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>.\Inc;.\RFIX;.\RFIX.win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\Inc;..\Inc\Geometry;..\Inc\GSRoot;..\Inc\GSUtils;..\Inc\GSXML;..\Inc\GSZLib;..\Inc\InputOutput\InputOutput;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;WINDOWS;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName).gdx</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <EntryPointSymbol>DllMainEntry</EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>.\Inc;.\RFIX;.\RFIX.win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\GDX-Template.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RFIX.win\GDX-Template.RC" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\Lib\GDLImp.LIB" />
+    <Library Include="..\Lib\GSRootImp.LIB" />
+    <Library Include="..\Lib\GSUtilsImp.LIB" />
+    <Library Include="..\Lib\InputOutputImp.LIB" />
+    <Library Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Include="Lib\GDLDev.lib" />
+    <Library Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Include="Lib\GDLDevD.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Inc\ACGDinc.h" />
+    <ClInclude Include="Inc\FileOperations.hpp" />
+    <ClInclude Include="Inc\GDLDefs.h" />
+    <ClInclude Include="Inc\GDLExport.h" />
+    <ClInclude Include="Inc\GDLExtDefs.h" />
+    <ClInclude Include="Inc\GDLParamList.hpp" />
+    <ClInclude Include="Inc\GDLPars.h" />
+    <ClInclude Include="Inc\GDLProc.h" />
+    <ClInclude Include="Inc\GDLPropertyList.hpp" />
+    <ClInclude Include="Inc\GDLPropertyListImp.hpp" />
+    <ClInclude Include="Inc\ISymbol2D.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

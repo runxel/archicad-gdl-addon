@@ -1,0 +1,66 @@
+/**
+ * Annotated Example Resource File for GDL-Addons.
+ * This file is part of the Archicad GDL Add-on Example package.
+ * <https://github.com/runxel/archicad-gdl-addon>
+ * 
+ * @file GDX-Template.rc
+ * .RC is an platform agnostic resource file format by Graphisoft
+ */
+
+#include	<Windows.h>
+#include	<winver.h>
+
+#ifndef		WINDOWS
+#define		WINDOWS
+#endif
+
+#include	"GDLExtDefs.h"
+
+1	ICON		LOADONCALL MOVEABLE IMPURE  ACGD.ico
+
+1   VERSIONINFO LOADONCALL MOVEABLE
+	FILEVERSION     23, 0, 0, 0
+	PRODUCTVERSION  23, 0, 0, 0
+	FILEFLAGSMASK   0
+	FILEOS          VOS__WINDOWS32
+	FILETYPE        VFT_APP
+	BEGIN
+		BLOCK "VarFileInfo"
+		BEGIN
+			VALUE "Translation", 0x409, 1252
+		END
+		BLOCK "StringFileInfo"
+		BEGIN
+			BLOCK "040904E4"
+			BEGIN
+				VALUE "CompanyName",		"<Your Name or Comp>"
+				VALUE "FileDescription",	"<Archicad GDL Test Extension>"
+				VALUE "FileVersion",		"1.0" ""
+				VALUE "InternalName",		"GDX-Template" /* The Name of the Extension */
+				VALUE "LegalCopyright",		"Copyright \251 <Your Name or Comp> 2020" /* Change Copyright and Year */
+				VALUE "OriginalFilename",	"GDX-Template.gdx"
+				VALUE "ProductName",		"ARCHICAD"
+				VALUE "ProductVersion",		"23.0"
+			END
+		END
+	END
+
+
+32500	ACNF
+		BEGIN
+			72,				0,		/* sizeof (ACNF)(4)	*/
+			ACNF_VERSION,	0,		/* acnfVers     (4)	*/
+			PlatformCode,	0,		/* platform     (4)	*/
+			0,				0,		/* disableFlags (4)	*/
+			IoGDLMethod,	0,		/* method		(4)	*/
+			9,						/* methodVers   (2)	*/
+			0,						/* reserved     (2)	*/
+			PersistentFunction,	0,	/* methodFlags  (4)	*/
+			"date",					/* reserved     (4)	*/
+			"offs",					/* reserved     (4)	*/
+			"slen",					/* reserved     (4)	*/
+			0,				0,		/*  0			(4) */
+			"GDXTEMPLATE\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"	/* module name (make length always 32)*/
+			// The "module name" is important: You will call the add-on by this name:
+			// channel = OPEN ("GDXTEMPLATE",  "", "<parameters>")
+		END

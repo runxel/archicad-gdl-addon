@@ -1,0 +1,7 @@
+# .gitattributes
+# see also <https://github.com/alexkaratarakis/gitattributes>
+
+*.lib   binary
+*.ico   binary
+
+#*.vcxproj.filters  merge=union
